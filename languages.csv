@@ -1,0 +1,21 @@
+name;description;simplicity;demand;paybility;mobile;web;backend;bigdata
+Python;text;5;10;2;0;2;2;2
+Java;text;3;8;5;2;0;2;1
+JavaScript;text;4;8;2;1;2;2;0
+C;text;2;10;5;0;1;2;1
+C++;text;2;5;5;1;1;2;2
+C#;text;2;5;2;1;0;0;0
+Swift;text;4;5;5;2;0;1;0
+Kotlin;text;4;5;5;2;0;1;0
+Go;text;4;4;3;0;2;2;0
+PHP;text;5;4;3;0;2;2;0
+Objective C;text;2;2;5;2;2;0;0
+Lisp;text;3;1;5;0;0;1;2
+TypeScript;text;4;5;2;2;2;2;0
+R;text;4;6;2;0;0;0;2
+Ruby;text;4;2;3;0;2;2;0
+Perl;text;2;2;5;0;1;1;0
+SQL;text;3;10;2;0;1;1;2
+Visual Basic;text;5;1;2;0;0;0;0
+Assembler;text;1;1;2;1;0;0;0
+Groovy;text;5;2;3;0;0;1;0
