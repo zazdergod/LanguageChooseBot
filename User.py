@@ -4,3 +4,4 @@ class User:
         self.id = user_id
         self.progress = 0
         self.languages = []
+
