@@ -10,7 +10,7 @@ class Controller:
 
     def check_message(self, message):
         progress = self.answer_control.get_user_progress(message.chat.id)
-        
+
 
 answer = AnswerControl()
 controller = Controller("5036242550:AAFlwSBYIaGiuB8rptSUoP5UuCEIEm3LpiQ", answer)
