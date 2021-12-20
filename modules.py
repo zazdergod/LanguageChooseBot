@@ -12,6 +12,20 @@ class Language(object):
         self.result = self.result + int(self.measure[m]) * s * r
 
 
+class Question(object):
+    def __init__(self, text, answers, ratio):
+        self.text = text
+        self.answers = answers
+        self.ratio = ratio
+
+
+class Answer(object):
+    def __init__(self, text, measure, scale):
+        self.text = text
+        self.measure = measure
+        self.scale = scale
+
+
 def init_languages():
     all_languages = [
         Language('Python', {'mobile': 0, 'web': 2}),
@@ -22,19 +36,11 @@ def init_languages():
 
 def init_questions():
     all_questions = [
-        {'text': 'В какой сфере вы хотели бы работать?',
-         'answers': [
-             {'text': 'Мобильная разработка',
-              'measure': 'mobile',
-              'scale': 1,
-              },
-             {'text': 'Web-разработка',
-              'measure': 'web',
-              'scale': 1,
-              },
-         ],
-         'ratio': 5
-         },
+        Question('В какой сфере вы хотели бы работать?',
+                 [
+                    Answer('Мобильная разработка', 'mobile', 1),
+                    Answer('Web-разработка', 'web', 1)
+                 ], 5),
     ]
     return all_questions
 
@@ -44,9 +50,9 @@ questions = init_questions()
 
 
 def write_answer(l, q, a):
-    measure = questions[q]['answers'][a]['measure']
-    scale = questions[q]['answers'][a]['scale']
-    ratio = questions[q]['ratio']
+    measure = questions[q].answers[a].measure
+    scale = questions[q].answers[a].scale
+    ratio = questions[q].ratio
     for i in l:
         i.calculate(measure, scale, ratio)
     if q == len(questions) - 1:
@@ -73,8 +79,6 @@ for i in l1:
 new_answer = write_answer(l1, 0, 1)
 if new_answer:
     print(new_answer)
-# for i in l1:
-#     print(i.result)
 
 
 del l1
