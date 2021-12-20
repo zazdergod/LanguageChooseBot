@@ -1,5 +1,6 @@
 import telebot
 from AnswerControl import AnswerControl
+from modules import init_questions
 
 
 class Controller:
@@ -7,6 +8,7 @@ class Controller:
     def __init__(self, token, answer_control):
         self.bot = telebot.TeleBot(token)
         self.answer_control = answer_control
+        self.questions = init_questions()
 
     def check_message(self, message):
         progress = self.answer_control.get_user_progress(message.chat.id)
